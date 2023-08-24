@@ -1,0 +1,32 @@
+{
+  "name": "MyChomePlugin",
+  "description": "",
+  "homepage_url-error": "",
+  "homepage_url": "http://nourl.no",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "js": ["after.js"],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["main.js"],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ],
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ]
+}
